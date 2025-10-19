@@ -52,7 +52,7 @@ def abrir_ventana_principal(nombre, rol):
     ancho = ventana.winfo_screenwidth()
     alto = ventana.winfo_screenheight()
 
-    fondo = Image.open("C:\\Users\\Rudy\\Desktop\\Proyecto\\fondo.png")
+    fondo = Image.open("C:\\Users\\tomas\\OneDrive\\Desktop\\Proyecto\\fondo.png")
     fondo = fondo.resize((ancho, alto), Image.Resampling.LANCZOS)
     fondo_tk = ImageTk.PhotoImage(fondo)
 
@@ -64,8 +64,7 @@ def abrir_ventana_principal(nombre, rol):
     canvas.create_text(ancho//2, 130, text=f"Rol: {rol.upper()}", font=("Arial", 18), fill="white")
 
     if rol == "administrador":
-        botones = ["Crear Clientes", "Asistencia", "Buscar Clientes", "Inventario", "Listado Clientes por visitar", "Odennes de Trabajo",
-                   "Material Instalado", "Control de Cobros", "Facturar"]
+        botones = ["Crear Clientes", "Asistencia", "Buscar Clientes", "Inventario", "Listado Clientes por visitar", "Odennes de Trabajo","Material Instalado", "Control de Cobros", "Facturar"]
     elif rol == "cobrador":
         botones = ["Asistencia", "Buscar Clientes", "Listado Clientes Visitar", "Control de cobros", "Facturar"]
     else:
@@ -93,7 +92,7 @@ def ventana_login_gui():
     ancho = ventana_login.winfo_screenwidth()
     alto = ventana_login.winfo_screenheight()
 
-    fondo = Image.open("C:\\Users\\Rudy\\Desktop\\Proyecto\\fondo.png")
+    fondo = Image.open("C:\\Users\\tomas\\OneDrive\\Desktop\\Proyecto\\fondo.png")
     fondo = fondo.resize((ancho, alto), Image.Resampling.LANCZOS)
     fondo_tk = ImageTk.PhotoImage(fondo)
 
@@ -101,7 +100,7 @@ def ventana_login_gui():
     canvas.pack(fill="both", expand=True)
     canvas.create_image(0, 0, image=fondo_tk, anchor="nw")
 
-    logo = Image.open("C:\\Users\\Rudy\\Desktop\\Proyecto\\logo.png")
+    logo = Image.open("C:\\Users\\tomas\\OneDrive\\Desktop\\Proyecto\\logo.png")
     logo = logo.resize((500, 500), Image.Resampling.LANCZOS)
     imagen_logo = ImageTk.PhotoImage(logo)
     canvas.create_image(ancho//2, 150, image=imagen_logo)
@@ -116,8 +115,7 @@ def ventana_login_gui():
     entry_contraseña = tk.Entry(ventana_login, show="*", font=("Arial", 14))
     canvas.create_window(ancho//2, 460, window=entry_contraseña, width=250)
 
-    boton_login = tk.Button(ventana_login, text="Iniciar Sesión", command=verificar_login,
-                             bg="#4CAF50", fg="white", font=("Arial", 14), width=20)
+    boton_login = tk.Button(ventana_login, text="Iniciar Sesión", command=verificar_login, bg="#4CAF50", fg="white", font=("Arial", 14), width=20)
     canvas.create_window(ancho//2, 520, window=boton_login)
 
     boton_salir = tk.Button(ventana_login, text="Salir", command=ventana_login.destroy,
@@ -129,5 +127,5 @@ def ventana_login_gui():
 
 crear_tablas()
 ventana_login_gui()
-  
-  "hola"
+
+print("holaMundo")
